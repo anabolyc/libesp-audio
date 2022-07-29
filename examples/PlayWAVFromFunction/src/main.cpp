@@ -18,7 +18,7 @@ AudioFileSourceFunction* file;
 AudioOutputI2SNoDAC* out;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
 
   // ===== create instance with length of song in [sec] =====

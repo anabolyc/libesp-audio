@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #ifdef ESP32
     void setup() {
-        Serial.begin(115200);
+        Serial.begin(SERIAL_BAUD);
         Serial.printf("ERROR - ESP32 does not support LittleFS\n");
     }
     void loop() {}
@@ -29,7 +29,7 @@ void setup()
 
   WiFi.mode(WIFI_OFF); 
 
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   Serial.println("Starting up...\n");
 
   audioLogger = &Serial;

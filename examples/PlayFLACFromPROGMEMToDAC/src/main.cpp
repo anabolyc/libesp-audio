@@ -11,7 +11,7 @@ AudioGeneratorFLAC *flac;
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   Serial.println("Starting up...\n");
 
   audioLogger = &Serial;

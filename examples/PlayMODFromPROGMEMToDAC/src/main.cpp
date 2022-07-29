@@ -22,7 +22,7 @@ AudioOutputI2S *out;
 void setup()
 {
   WiFi.mode(WIFI_OFF); //WiFi.forceSleepBegin();
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
 
   audioLogger = &Serial;

@@ -145,7 +145,7 @@ bool GetLocalTime(struct tm * info, uint32_t ms) {
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
   // We start by connecting to a WiFi network
   Serial.println();

@@ -12,7 +12,7 @@ AudioOutputI2S *out;
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
 
   Serial.printf("RTTTL start\n");

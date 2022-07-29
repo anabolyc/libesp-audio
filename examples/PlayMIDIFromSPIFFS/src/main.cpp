@@ -31,7 +31,7 @@ void setup()
 
   WiFi.mode(WIFI_OFF); 
 
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   SPIFFS.begin();
   Serial.println("Starting up...\n");
 

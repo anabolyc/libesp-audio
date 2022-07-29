@@ -60,7 +60,7 @@ void StatusCallback(void *cbData, int code, const char *string)
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
   Serial.println("Connecting to WiFi");
 

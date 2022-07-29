@@ -29,7 +29,7 @@ AudioOutputSPDIF *output = NULL;
 AudioGeneratorFLAC *decoder = NULL;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   Serial.println();
   delay(1000);
 

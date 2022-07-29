@@ -50,6 +50,10 @@ void loop() {}
 #define STAPSK  "your-password"
 #endif
 
+void LoadSettings();
+void SaveSettings();
+void RedirectToIndex(WiFiClient *client);
+
 const char* ssid = STASSID;
 const char* password = STAPSK;
 
@@ -261,12 +265,12 @@ void setup()
   preallocateBuffer = malloc(preallocateBufferSize);
   preallocateCodec = malloc(preallocateCodecSize);
   if (!preallocateBuffer || !preallocateCodec) {
-    Serial.begin(115200);
+    Serial.begin(SERIAL_BAUD);
     Serial.printf_P(PSTR("FATAL ERROR:  Unable to preallocate %d bytes for app\n"), preallocateBufferSize+preallocateCodecSize);
     while (1) delay(1000); // Infinite halt
   }
 
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
 
   delay(1000);
   Serial.printf_P(PSTR("Connecting to WiFi\n"));

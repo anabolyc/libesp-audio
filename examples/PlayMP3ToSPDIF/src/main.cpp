@@ -46,7 +46,7 @@ void MDCallback(void *cbData, const char *type, bool isUnicode, const char *stri
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
   Serial.println();
   audioLogger = &Serial;

@@ -27,14 +27,15 @@ AudioOutputMixerStub *stub[2];
 void setup()
 {
   WiFi.mode(WIFI_OFF); 
-  Serial.begin(115200);
+  Serial.begin(SERIAL_BAUD);
   delay(1000);
   Serial.printf("WAV start\n");
 
   audioLogger = &Serial;
   file[0] = new AudioFileSourcePROGMEM( viola, sizeof(viola) );
   out = new AudioOutputI2S();
-  mixer = new AudioOutputMixer(32, out);
+  mixer = new AudioOutputMixer(32);
+  mixer->AddOutput(out);
   stub[0] = mixer->NewInput();
   stub[0]->SetGain(0.3);
   wav[0] = new AudioGeneratorWAV();
