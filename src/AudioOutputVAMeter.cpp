@@ -60,9 +60,9 @@ bool AudioOutputVAMeter::ConsumeSample(int16_t sample[2])
 
 bool AudioOutputVAMeter::stop()
 {
-  memset(window, 0, sizeof(window));
-  memset(vasum, 0, sizeof(window));
-  memset(va, 0, sizeof(window));
+  // memset(window, 0, sizeof(window));
+  // memset(vasum, 0, sizeof(window));
+  // memset(va, 0, sizeof(window));
   return true;
 }
 
