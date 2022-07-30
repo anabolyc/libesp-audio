@@ -41,7 +41,7 @@ public:
 
 protected:
   AudioOutputMixer *parent;
-  bool left, right;
+  bool left = true, right = true;
   int id;
 };
 
