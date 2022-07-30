@@ -51,7 +51,7 @@ bool AudioOutputVAMeter::ConsumeSample(int16_t sample[2])
 
   if (++sample_counter >= samples) {
     sample_counter = 0;
-    Serial.printf("%d %d\n", vasum[0], vasum[1]);
+    // Serial.printf("%d %d\n", vasum[0], vasum[1]);
   }
 
   return true;
